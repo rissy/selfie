@@ -1,16 +1,34 @@
+body {
+  background-color: #aaa;
+  font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
 .main-wrapper {
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 140px auto;
   width: auto;
   margin: 60px;
-  min-height: 600px;
 }
 
 .menu {
-  min-height: 600px;
+  display: inline-table;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.menu-item {
+  height: 40px;
+  background-color: #ddd;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.active-menu-item {
+  background-color: #fff;
 }
 
 .content {
   min-height: 600px;
-  border: 2px solid black;
+  background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
