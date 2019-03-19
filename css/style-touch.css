@@ -7,29 +7,40 @@ body {
   display: flex;
   flex-direction: column;
   width: auto;
+  min-width: 300px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 .menu {
   display: flex;
+  width: auto;
+  justify-content: center;
   flex-wrap: nowrap;
-  height: 100%;
-  width: 120px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: none;
 }
 
 .menu-item {
   height: 50px;
+  width: 100%;
   background-color: #ddd;
-  text-align: right;
-  padding-right: 16px;
+  text-align: center;
+  padding-right: 0;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 46px;
   color: #666;
   transition: color 800ms, background-color 800ms;
   cursor: pointer;
   user-select: none;
+}
+
+.menu-icon {
+  display: inline;
+  vertical-align: middle;
+}
+
+.menu-text {
+  display: none;
 }
 
 .menu-item:hover {
@@ -44,5 +55,5 @@ body {
 .content {
   width: auto;
   background-color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: none;
 }

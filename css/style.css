@@ -29,6 +29,10 @@ body {
   user-select: none;
 }
 
+.menu-icon {
+  display: none;
+}
+
 .menu-item:hover {
   color: #000;
 }
