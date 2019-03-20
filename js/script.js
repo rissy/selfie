@@ -1,4 +1,6 @@
 ;(function () {
+  document.getElementById('menu').classList.toggle('no-menu');
+
   var menuElementsIds = ['myself', 'resume', 'portfolio', 'site'];
   var menuElements = menuElementsIds.map(function(id) {return document.getElementById(id)});
   var previewElement = menuElements[0];

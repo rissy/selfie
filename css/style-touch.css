@@ -39,3 +39,7 @@
   width: auto;
   box-shadow: none;
 }
+
+.no-menu {
+  display: none;
+}
