@@ -3,13 +3,17 @@ body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-.main-wrapper {
+.wrapper {
+  margin: 40px 20px;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   width: auto;
   min-width: 300px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .menu {
@@ -27,7 +31,7 @@ body {
   text-align: center;
   padding-right: 0;
   font-size: 16px;
-  line-height: 46px;
+  line-height: 50px;
   color: #666;
   transition: color 800ms, background-color 800ms;
   cursor: pointer;
@@ -37,6 +41,7 @@ body {
 .menu-icon {
   display: inline;
   vertical-align: middle;
+  fill: currentColor;
 }
 
 .menu-text {
