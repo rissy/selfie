@@ -1,18 +1,31 @@
 ;(function () {
-  document.getElementById('menu').classList.toggle('no-menu');
+  document.getElementById('menu').classList.toggle('no-display');
 
-  var menuElementsIds = ['myself', 'resume', 'portfolio', 'site'];
-  var menuElements = menuElementsIds.map(function(id) {return document.getElementById(id)});
-  var previewElement = menuElements[0];
+  var TAB_SUFFIX = '-tab';
+  var PAGE_SUFFIX = '-page';
 
-  menuElements.forEach(function (element) {
-    element.onclick = function () {
+  var elementsIds = ['resume', 'myself', 'portfolio', 'site'];
+
+  var elements = elementsIds.map(function(id) {
+    return {
+      tab: document.getElementById(id + TAB_SUFFIX),
+      page: document.getElementById(id + PAGE_SUFFIX)
+    }
+  });
+
+  var previewElement = elements[0];
+
+  elements.forEach(function (element) {
+    element.tab.onclick = function () {
       if (element === previewElement) {
         return;
       }
 
-      previewElement.classList.toggle('active-menu-item');
-      element.classList.toggle('active-menu-item');
+      element.tab.classList.toggle('active-menu-item');
+      previewElement.tab.classList.toggle('active-menu-item');
+
+      element.page.classList.toggle('no-display');
+      previewElement.page.classList.toggle('no-display');
 
       previewElement = element;
     };
