@@ -1,6 +1,21 @@
 body {
   background-color: #aaa;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+h1 {
+  margin: 0 0 4px;
+}
+
+h2 {
+  margin: 20px 0 px;
+}
+
+a {
+  color: #333;
 }
 
 .wrapper {
@@ -9,7 +24,7 @@ body {
 
 .main {
   display: flex;
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -47,13 +62,98 @@ body {
 
 .content {
   min-height: 800px;
-  width: 880px;
+  width: 780px;
   background-color: #fff;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   box-sizing: border-box;
-  padding: 20px;
+  padding: 30px 40px;
 }
 
 .no-display {
   display: none;
+}
+
+.additional {
+  color: #aaa;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  max-width: 680px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 330px;
+  height: 116px;
+  background-color: #f5f5f5;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.mini-card {
+  padding: 10px 20px;
+  width: 330px;
+  height: 70px;
+  background-color: #f5f5f5;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.micro-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  max-width: 680px;
+}
+
+.micro-card {
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+  margin-left: 10px;
+}
+
+.link-button {
+  display: flex;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  width: 152px;
+  margin-top: 20px;
+  line-height: 1.2;
+  padding: 6px 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.link-button:hover {
+  background-color: #f8f8f8;
+}
+
+.link-button-text {
+  margin-left: 4px;
+}
+
+.noscript {
+  margin-top: 40px;
+  color: #aaa;
 }
