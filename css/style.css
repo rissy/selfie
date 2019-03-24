@@ -19,18 +19,19 @@ a {
 }
 
 .wrapper {
-  margin: 60px;
+  margin: 20px 10px;
 }
 
 .main {
   display: flex;
-  width: 900px;
+  justify-content: center;
+  width: 880px;
   margin: 0 auto;
 }
 
 .menu {
   height: 100%;
-  width: 120px;
+  width: 100px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
