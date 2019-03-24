@@ -1,11 +1,12 @@
 .wrapper {
-  margin: 40px 20px;
+  margin: 20px 10px;
+  font-size: 14px;
 }
 
 .main {
   flex-direction: column;
   width: auto;
-  min-width: 320px;
+  min-width: 300px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -42,4 +43,16 @@
 
 .no-display {
   display: none;
+}
+
+.card {
+  height: auto;
+}
+
+.common-card {
+  width: 100%;
+}
+
+.mini-card {
+  width: 100%;
 }
