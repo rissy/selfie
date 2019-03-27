@@ -1,33 +1,45 @@
 ;(function () {
-  document.getElementById('menu').classList.toggle('no-display');
+  var menu = document.getElementById('menu');
 
-  var TAB_SUFFIX = '-tab';
+  menu.classList.toggle('no-display');
+
   var PAGE_SUFFIX = '-page';
 
-  var elementsIds = ['resume', 'myself', 'portfolio', 'site'];
-
-  var elements = elementsIds.map(function(id) {
-    return {
-      tab: document.getElementById(id + TAB_SUFFIX),
+  var elementsIds = ['resume', 'myself', 'portfolio', 'about'];
+  var elements = {};
+  
+  elementsIds.forEach(function(id) {
+    elements[id] = {
+      tab: document.getElementById(id),
       page: document.getElementById(id + PAGE_SUFFIX)
     }
-  });
+  })
 
-  var previewElement = elements[0];
+  var previewElementId = elementsIds[0];
 
-  elements.forEach(function (element) {
-    element.tab.onclick = function () {
-      if (element === previewElement) {
-        return;
+  menu.onclick = function(ev) {
+    var element = ev.target;
+
+    while (element !== this) {
+      if (element.tagName === 'DIV') {
+        onMenuClick(element.id);
       }
 
-      element.tab.classList.toggle('active-menu-item');
-      previewElement.tab.classList.toggle('active-menu-item');
+      element = element.parentNode;
+    }
+  };
 
-      element.page.classList.toggle('no-display');
-      previewElement.page.classList.toggle('no-display');
+  function onMenuClick(elementId) {
+    if (elementId === previewElementId) {
+      return;
+    }
 
-      previewElement = element;
-    };
-  });
+    elements[elementId].tab.classList.toggle('active-menu-item');
+    elements[previewElementId].tab.classList.toggle('active-menu-item');
+
+    elements[elementId].page.classList.toggle('no-display');
+    elements[previewElementId].page.classList.toggle('no-display');
+
+    previewElementId = elementId;
+  }
 })();
