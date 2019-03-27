@@ -14,10 +14,6 @@ h2 {
   margin: 20px 0 px;
 }
 
-a {
-  color: #333;
-}
-
 .wrapper {
   margin: 20px 10px;
 }
@@ -152,4 +148,12 @@ a {
 .noscript {
   margin-top: 40px;
   color: #aaa;
+}
+
+.resume-link {
+  color: #333;
+}
+
+.copy {
+  font-size: 12px;
 }
