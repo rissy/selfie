@@ -4,6 +4,7 @@
   menu.classList.toggle('no-display');
 
   var PAGE_SUFFIX = '-page';
+  var TAG_PREFIX = '/#/';
 
   var elementsIds = ['resume', 'myself', 'portfolio', 'about'];
   var elements = {};
@@ -17,12 +18,21 @@
 
   var previewElementId = elementsIds[0];
 
+  var urlHash = window.location.hash.substr(2);
+
+  if (urlHash && elementsIds.indexOf(urlHash) !== -1) {
+    onMenuClick(urlHash);
+  }
+
   menu.onclick = function(ev) {
     var element = ev.target;
 
     while (element !== this) {
       if (element.tagName === 'DIV') {
         onMenuClick(element.id);
+        addUrlHash(element.id);
+
+        return;
       }
 
       element = element.parentNode;
@@ -41,5 +51,9 @@
     elements[previewElementId].page.classList.toggle('no-display');
 
     previewElementId = elementId;
+  }
+
+  function addUrlHash(elementId) {
+    window.location.href = window.location.origin + TAG_PREFIX + elementId;
   }
 })();
