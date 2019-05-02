@@ -109,6 +109,7 @@ p + p {
   padding: 10px 20px;
   width: auto;
   min-height: 92px;
+  max-width: 680px;
 }
 
 .mini-card {
