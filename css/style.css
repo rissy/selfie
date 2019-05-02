@@ -136,6 +136,22 @@ p + p {
   margin-left: 10px;
 }
 
+.download-icon {
+  color: #aaa;
+  fill: currentColor;
+  cursor: pointer;
+}
+
+.download-icon:hover {
+  color: #000;
+}
+
+.download-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
 .link-button {
   display: flex;
   text-decoration: none;
