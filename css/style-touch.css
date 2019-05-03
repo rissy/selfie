@@ -55,3 +55,8 @@
 .mini-card {
   width: 100%;
 }
+
+.about-image {
+  width: 260px;
+  float: center;
+}

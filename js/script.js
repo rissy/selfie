@@ -6,7 +6,7 @@
   var PAGE_SUFFIX = '-page';
   var TAG_PREFIX = '/#/';
 
-  var elementsIds = ['resume', 'myself', 'portfolio', 'about'];
+  var elementsIds = ['resume', 'portfolio', 'about'];
   var elements = {};
   
   elementsIds.forEach(function(id) {
