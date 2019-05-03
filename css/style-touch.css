@@ -59,4 +59,5 @@
 .about-image {
   width: 260px;
   float: center;
+  content: url(../img/myself-small.jpg);
 }
