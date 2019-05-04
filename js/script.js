@@ -1,4 +1,6 @@
 ;(function () {
+  window.onpopstate = loadState;
+
   var menu = document.getElementById('menu');
 
   menu.classList.toggle('no-display');
@@ -18,11 +20,7 @@
 
   var previewElementId = elementsIds[0];
 
-  var urlHash = window.location.hash.substr(2);
-
-  if (urlHash && elementsIds.indexOf(urlHash) !== -1) {
-    onMenuClick(urlHash);
-  }
+  loadState();
 
   menu.onclick = function(ev) {
     var element = ev.target;
@@ -31,6 +29,8 @@
       if (element.tagName === 'DIV') {
         onMenuClick(element.id);
         addUrlHash(element.id);
+
+        previewElementId = element.id;
 
         return;
       }
@@ -49,11 +49,23 @@
 
     elements[elementId].page.classList.toggle('no-display');
     elements[previewElementId].page.classList.toggle('no-display');
+  }
 
-    previewElementId = elementId;
+  function loadState() {
+    var urlHash = window.location.hash.substr(2);
+
+    if (urlHash && elementsIds.indexOf(urlHash) !== -1) {
+      onMenuClick(urlHash);
+  
+      previewElementId = urlHash;
+    }  
   }
 
   function addUrlHash(elementId) {
-    window.location.href = window.location.origin + TAG_PREFIX + elementId;
+    if (elementId === previewElementId) {
+      return;
+    }
+
+    history.pushState({}, '' ,TAG_PREFIX + elementId);
   }
 })();
