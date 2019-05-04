@@ -58,8 +58,9 @@
 
 .about-image {
   width: 260px;
+  height: 385px;
   float: left;
-  content: url(../img/myself-small.jpg);
+  background-image: url("/img/myself-small.jpg");
   margin-left: 0;
 }
 
