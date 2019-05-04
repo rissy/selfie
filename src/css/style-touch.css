@@ -58,6 +58,11 @@
 
 .about-image {
   width: 260px;
-  float: center;
+  float: left;
   content: url(../img/myself-small.jpg);
+  margin-left: 0;
+}
+
+.clear-text {
+  clear: both;
 }
