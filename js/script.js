@@ -53,12 +53,11 @@
 
   function loadState() {
     var urlHash = window.location.hash.substr(2);
+    var elementId = elementsIds.indexOf(urlHash) !== -1 ? urlHash : elementsIds[0];
 
-    if (urlHash && elementsIds.indexOf(urlHash) !== -1) {
-      onMenuClick(urlHash);
+    onMenuClick(elementId);
   
-      previewElementId = urlHash;
-    }  
+    previewElementId = elementId;
   }
 
   function addUrlHash(elementId) {
