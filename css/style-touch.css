@@ -1,69 +1,69 @@
 .wrapper {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .main {
-  flex-direction: column;
-  width: auto;
-  min-width: 300px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    flex-direction: column;
+    width: auto;
+    min-width: 300px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .menu {
-  display: flex;
-  width: auto;
-  justify-content: center;
-  flex-wrap: nowrap;
-  box-shadow: none;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-wrap: nowrap;
+    box-shadow: none;
 }
 
 .menu-item {
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  padding-right: 0;
-  line-height: 50px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+    line-height: 50px;
 }
 
 .menu-icon {
-  display: inline;
-  vertical-align: middle;
-  fill: currentColor;
+    display: inline;
+    vertical-align: middle;
+    fill: currentColor;
 }
 
 .menu-text {
-  display: none;
+    display: none;
 }
 
 .content {
-  width: auto;
-  box-shadow: none;
+    width: auto;
+    box-shadow: none;
 }
 
 .no-display {
-  display: none;
+    display: none;
 }
 
 .card {
-  height: auto;
+    height: auto;
 }
 
 .common-card {
-  width: 100%;
+    width: 100%;
 }
 
 .mini-card {
-  width: 100%;
+    width: 100%;
 }
 
 .about-image {
-  width: 220px;
-  height: 326px;
-  float: left;
-  background-image: url("/img/myself-small.jpg");
-  margin-left: 0;
+    width: 220px;
+    height: 326px;
+    float: left;
+    background-image: url("/img/myself-small.jpg");
+    margin-left: 0;
 }
 
 .clear-text {
-  clear: both;
+    clear: both;
 }
