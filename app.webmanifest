@@ -1,0 +1,22 @@
+{
+    "name": "Aleksey Goroshevskiy | resume",
+    "short_name": "Rissik",
+    "start_url": "./",
+    "display": "standalone",
+    "scope": "./",
+    "theme_color": "#aaaaaa",
+    "background_color": "#aaaaaa",
+    "icons": [
+        {
+            "src": "img/favicons/fav-1024.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+        },
+        {
+            "src": "img/favicons/fav-1024.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "maskable"
+        }
+    ]
+}
